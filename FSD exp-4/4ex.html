@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selector Forms Example</title>
+  <link rel="stylesheet" href="selectors.css">
+</head>
+<body>
+
+  <h1>CSS Selector Forms Demonstration</h1>
+
+  <!-- SIMPLE SELECTORS -->
+  <section>
+    <h2>Simple Selectors</h2>
+    <p>This paragraph is targeted using an element selector.</p>
+    <p id="unique">This paragraph uses an ID selector.</p>
+    <p class="highlight">This paragraph uses a Class selector.</p>
+    <div class="highlight special">This div uses multiple classes.</div>
+    <p>This demonstrates group selectors (e.g., h1, h2, p).</p>
+  </section>
+
+  <!-- COMBINATOR SELECTORS -->
+  <section>
+    <h2>Combinator Selectors</h2>
+    <div class="parent">
+      <p>This is a descendant of .parent (descendant selector).</p>
+      <div>
+        <p>This is a nested paragraph (still a descendant).</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>This is a direct child of .container.</p>
+      <div>
+        <p>This is NOT a direct child (it’s nested deeper).</p>
+      </div>
+    </div>
+
+    <h3>Heading</h3>
+    <p>This paragraph comes right after h3 (adjacent sibling).</p>
+    <p>This paragraph also comes after h3 (general sibling).</p>
+  </section>
+
+  <!-- PSEUDO-CLASS SELECTORS -->
+  <section>
+    <h2>Pseudo-Class Selectors</h2>
+    <a href="#">Hover over this link</a>
+    <p>Hover over me!</p>
+    <ul>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ul>
+  </section>
+
+  <!-- PSEUDO-ELEMENT SELECTORS -->
+  <section>
+    <h2>Pseudo-Element Selectors</h2>
+    <p class="pseudo">This paragraph demonstrates pseudo-elements.</p>
+  </section>
+
+  <!-- ATTRIBUTE SELECTORS -->
+  <section>
+    <h2>Attribute Selectors</h2>
+    <input type="text" placeholder="Text box">
+    <input type="password" placeholder="Password box">
+    <a href="https://example.com" target="_blank">External Link</a>
+    <a href="#" title="hover me">Link with title attribute</a>
+  </section>
+
+</body>
+</html>

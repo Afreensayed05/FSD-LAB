@@ -1,0 +1,101 @@
+/* ================= SIMPLE SELECTORS ================= */
+
+/* Element Selector */
+p {
+  color: navy;
+}
+
+/* ID Selector */
+#unique {
+  color: red;
+  font-weight: bold;
+}
+
+/* Class Selector */
+.highlight {
+  background-color: yellow;
+}
+
+/* Group Selector */
+h1, h2, p {
+  font-family: Arial, sans-serif;
+}
+
+/* Universal Selector */
+* {
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+/* ================= COMBINATOR SELECTORS ================= */
+
+/* Descendant Selector */
+.parent p {
+  color: green;
+}
+
+/* Child Selector */
+.container > p {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Adjacent Sibling Selector */
+h3 + p {
+  color: darkorange;
+}
+
+/* General Sibling Selector */
+h3 ~ p {
+  font-style: italic;
+}
+
+/* ================= PSEUDO-CLASS SELECTORS ================= */
+
+a:hover {
+  color: crimson;
+  text-decoration: underline;
+}
+
+p:hover {
+  background-color: lightgray;
+}
+
+li:first-child {
+  color: blue;
+}
+
+li:last-child {
+  color: purple;
+}
+
+/* ================= PSEUDO-ELEMENT SELECTORS ================= */
+
+.pseudo::first-letter {
+  font-size: 30px;
+  color: red;
+}
+
+.pseudo::after {
+  content: " (This text is added using ::after)";
+  color: gray;
+  font-style: italic;
+}
+
+/* ================= ATTRIBUTE SELECTORS ================= */
+
+input[type="text"] {
+  border: 2px solid blue;
+}
+
+input[type="password"] {
+  border: 2px solid green;
+}
+
+a[target="_blank"] {
+  color: darkred;
+}
+
+a[title] {
+  background-color: #f0e68c;
+}
