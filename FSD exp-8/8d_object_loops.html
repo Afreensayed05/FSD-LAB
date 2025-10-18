@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Looping through Object Data</title>
+</head>
+<body>
+  <h2>Display Object Data using Loops</h2>
+
+  <script>
+    let student = { name: "Alice", age: 20, course: "BCA", marks: 85 };
+
+    document.write("<b>Using for-in loop:</b><br>");
+    for (let key in student) {
+      document.write(key + ": " + student[key] + "<br>");
+    }
+
+    document.write("<br><b>Using for-of loop (on array):</b><br>");
+    let fruits = ["Apple", "Banana", "Mango"];
+    for (let fruit of fruits) {
+      document.write(fruit + "<br>");
+    }
+
+    document.write("<br><b>Using forEach loop:</b><br>");
+    fruits.forEach((item, index) => {
+      document.write(index + ": " + item + "<br>");
+    });
+  </script>
+</body>
+</html>
