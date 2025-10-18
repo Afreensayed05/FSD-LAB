@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Methods in JavaScript</title>
+</head>
+<body>
+  <h2>Different Ways to Take Input</h2>
+
+  <!-- 1. Input Box -->
+  <input type="text" id="txtInput" placeholder="Enter something">
+  <button onclick="getInputBox()">Show Input</button>
+  <p id="out1"></p>
+
+  <script>
+    // 1. From Input Box
+    function getInputBox() {
+      let val = document.getElementById("txtInput").value;
+      document.getElementById("out1").innerHTML = "You entered: " + val;
+    }
+
+    // 2. From Prompt
+    let name = prompt("Enter your name:");
+    console.log("You entered via prompt(): " + name);
+
+    // 3. From Form (example)
+    // document.forms["myForm"]["fieldname"].value (used in larger apps)
+  </script>
+</body>
+</html>
