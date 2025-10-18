@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User-defined Object Example</title>
+</head>
+<body>
+  <h2>User-defined Object Example</h2>
+
+  <script>
+    // Constructor Function
+    function Student(name, age, marks) {
+      this.name = name;
+      this.age = age;
+      this.marks = marks;
+
+      // Method
+      this.display = function() {
+        return this.name + " (" + this.age + " yrs) - Marks: " + this.marks;
+      };
+
+      // Accessor (getter)
+      this.getGrade = function() {
+        if (this.marks >= 90) return "A";
+        else if (this.marks >= 75) return "B";
+        else if (this.marks >= 50) return "C";
+        else return "Fail";
+      };
+    }
+
+    // Create Object
+    let s1 = new Student("John", 19, 85);
+
+    document.write("Name: " + s1.name + "<br>");
+    document.write("Age: " + s1.age + "<br>");
+    document.write("Marks: " + s1.marks + "<br>");
+    document.write("Grade: " + s1.getGrade() + "<br>");
+    document.write("Display: " + s1.display());
+  </script>
+</body>
+</html>

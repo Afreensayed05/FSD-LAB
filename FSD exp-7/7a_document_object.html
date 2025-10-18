@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document Object Example</title>
+</head>
+<body>
+  <h2>Using Document Object</h2>
+  <p id="demo"></p>
+
+  <script>
+    document.getElementById("demo").innerHTML =
+      "<b>Title:</b> " + document.title + "<br>" +
+      "<b>URL:</b> " + document.URL + "<br>" +
+      "<b>Last Modified:</b> " + document.lastModified;
+
+    // Change background color using document property
+    document.bgColor = "#e0f7fa";
+  </script>
+</body>
+</html>

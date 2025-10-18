@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RegExp Object Example</title>
+</head>
+<body>
+  <h2>Regex Object Example</h2>
+
+  <script>
+    let pattern = /[A-Z][a-z]+/g;
+    let str = "John and Alice went to London.";
+    let matches = str.match(pattern);
+
+    document.write("String: " + str + "<br>");
+    document.write("Words starting with capital letters: " + matches);
+  </script>
+</body>
+</html>
