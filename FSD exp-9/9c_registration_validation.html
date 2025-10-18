@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f8f9fa;
+    }
+    form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      width: 350px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 15px;
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #result {
+      margin-top: 15px;
+      padding: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <form onsubmit="return validateForm()">
+    <h2>Registration Form</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label for="mobile">Mobile:</label>
+    <input type="text" id="mobile" placeholder="Enter 10-digit mobile number">
+
+    <label for="email">E-mail:</label>
+    <input type="text" id="email" placeholder="Enter your email">
+
+    <button type="submit">Register</button>
+
+    <div id="result"></div>
+  </form>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value.trim();
+      let mobile = document.getElementById("mobile").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let result = document.getElementById("result");
+
+      // Regular Expressions
+      let namePattern = /^[A-Za-z][A-Za-z0-9]{5,}$/;  // Starts with letter, followed by alphanumeric, min length 6
+      let mobilePattern = /^[0-9]{10}$/;              // Only 10 digits
+      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/; // Simple email format
+
+      // Name Validation
+      if (!namePattern.test(name)) {
+        result.style.color = "red";
+        result.innerHTML = "❌ Invalid Name! Must start with a letter, be alphanumeric, and at least 6 characters.";
+        return false;
+      }
+
+      // Mobile Validation
+      if (!mobilePattern.test(mobile)) {
+        result.style.color = "red";
+        result.innerHTML = "❌ Invalid Mobile Number! Must contain exactly 10 digits.";
+        return false;
+      }
+
+      // Email Validation
+      if (!emailPattern.test(email)) {
+        result.style.color = "red";
+        result.innerHTML = "❌ Invalid Email Format! Should be like example@domain.com.";
+        return false;
+      }
+
+      // If all validations pass
+      result.style.color = "green";
+      result.innerHTML = "✅ Registration Successful!";
+      return false; // prevent actual form submission for demo
+    }
+  </script>
+
+</body>
+</html>
